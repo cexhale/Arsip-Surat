@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -59,3 +60,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Arsip-Surat
+
+## Tujuan
+Aplikasi ini dibuat untuk memenuhi tugas mata kuliah **Pemrograman Web Framework**.  
+Tujuannya adalah mengelola arsip surat berbasis web dengan framework **Laravel** dan database **MySQL**.
+
+## Fitur
+- Upload file surat dalam format **PDF** dengan validasi.  
+- Menampilkan daftar arsip dalam bentuk tabel.  
+- Pencarian arsip berdasarkan kata kunci.  
+- Download file PDF dari arsip.  
+- Hapus arsip dengan konfirmasi (popup).  
+- Manajemen kategori surat (tambah, edit, hapus).  
+- Halaman **About** berisi identitas pembuat aplikasi.  
+
+## Cara Menjalankan
+1. **Clone repository** (atau salin project ke lokal)  
+   ```bash
+   git clone https://github.com/username/arsip-surat.git
+   cd arsip-surat
+>>>>>>> 60f7e87c4de910fb190a5d0090dd758df3b64118
