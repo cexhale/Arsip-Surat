@@ -64,7 +64,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Arsip-Surat
 
 ## Tujuan
-Aplikasi ini dibuat untuk memenuhi tugas mata kuliah **Pemrograman Web Framework**.  
+Aplikasi ini dibuat untuk memenuhi tugas assesmen **Pemrograman Software Komputer**.  
 Tujuannya adalah mengelola arsip surat berbasis web dengan framework **Laravel** dan database **MySQL**.
 
 ## Fitur
@@ -82,3 +82,10 @@ Tujuannya adalah mengelola arsip surat berbasis web dengan framework **Laravel**
    git clone https://github.com/username/arsip-surat.git
    cd arsip-surat
 >>>>>>> 60f7e87c4de910fb190a5d0090dd758df3b64118
+
+## Screenshot
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f5eccb05-1178-4a2a-866b-bbe853de4e60" />
+<img width="1366" height="767" alt="image" src="https://github.com/user-attachments/assets/f51bc14f-dd65-4af5-bc00-e73774aa9f36" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4aa28e7e-fcd7-4c39-8817-57cfbb7a54db" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/bd6e5a38-7abe-4f9d-bebf-158b3f97b52c" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/efbf3f4f-bddd-4bc0-b381-da8cb1758daf" />
