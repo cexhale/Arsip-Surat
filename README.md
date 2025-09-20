@@ -79,7 +79,7 @@ Tujuannya adalah mengelola arsip surat berbasis web dengan framework **Laravel**
 ## Cara Menjalankan
 1. **Clone repository** (atau salin project ke lokal)  
    ```bash
-   git clone https://github.com/username/arsip-surat.git
+   git clone https://github.com/cexhale/arsip-surat.git
    cd arsip-surat
 >>>>>>> 60f7e87c4de910fb190a5d0090dd758df3b64118
 
