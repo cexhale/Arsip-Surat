@@ -38,7 +38,6 @@ class CategoryController extends Controller
 
     public function destroy(Category $category)
     {
-        // jika ada archive terkait, cascade delete karena foreign key onDelete cascade
         $category->delete();
         return redirect()->route('categories.index')->with('success','Kategori berhasil dihapus');
     }

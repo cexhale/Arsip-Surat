@@ -11,12 +11,12 @@ class ArchiveController extends Controller
 {
     public function index(Request $request)
     {
-        $q = $request->query('q');
+        $search = $request->query('search');
         $archives = Archive::with('category')
-            ->when($q, fn($query)=>$query->where('title','like',"%{$q}%"))
+            ->when($search, fn($query)=>$query->where('title','like',"%{$search}%"))
             ->orderBy('created_at','desc')
             ->paginate(10);
-        return view('archives.index', compact('archives','q'));
+        return view('archives.index', compact('archives','search'));
     }
 
     public function create()
@@ -30,11 +30,11 @@ class ArchiveController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'pdf_file' => 'required|file|mimes:pdf|max:20480', // max 20MB
+            'file_surat' => 'required|file|mimes:pdf|max:20480',
             'notes' => 'nullable|string'
         ]);
 
-        $path = $request->file('pdf_file')->store('archives', 'public');
+        $path = $request->file('file_surat')->store('archives', 'public');
 
         Archive::create([
             'title' => $validated['title'],
@@ -62,14 +62,13 @@ class ArchiveController extends Controller
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
-            'pdf_file' => 'nullable|file|mimes:pdf|max:20480',
+            'file_surat' => 'nullable|file|mimes:pdf|max:20480',
             'notes' => 'nullable|string'
         ]);
 
-        if ($request->hasFile('pdf_file')) {
-            // hapus file lama
+        if ($request->hasFile('file_surat')) {
             Storage::disk('public')->delete($archive->file_path);
-            $path = $request->file('pdf_file')->store('archives', 'public');
+            $path = $request->file('file_surat')->store('archives', 'public');
             $archive->file_path = $path;
         }
 
@@ -90,7 +89,6 @@ class ArchiveController extends Controller
 
     public function download(Archive $archive)
     {
-        // Mendownload file PDF
         return Storage::disk('public')->download($archive->file_path, $archive->title . '.pdf');
     }
 }

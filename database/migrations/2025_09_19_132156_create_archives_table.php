@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->unsignedBigInteger('category_id');
-            $table->string('file_path'); // path file PDF di storage
+            $table->string('file_path');
             $table->text('notes')->nullable();
             $table->timestamps();
 

@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ $archives->firstItem() + $index }}</td>
                 <td>{{ $a->title }}</td>
-                <td>{{ $a->category->name }}</td>
+                <td>{{ $a->category->namae }}</td>
                 <td>{{ $a->created_at->format('d-m-Y') }}</td>
                 <td>
                     <a href="{{ route('archives.show', $a) }}">Lihat >></a>
